@@ -47,3 +47,7 @@ gem "twitter-bootstrap-rails"
 gem "therubyracer"
 
 gem 'httparty'
+
+group :production do
+  gem 'pg'
+end
