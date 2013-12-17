@@ -1,0 +1,53 @@
+<div class="counter">
+  <div class="timer">
+    <ul id="countdown">
+      <li>
+         <span class="days">00</span>
+         <p class="timeRefDays">days</p>
+      </li>
+      
+      <li class="seperator">.</li>
+       <li>
+        <span class="hours">00</span>
+        <p class="timeRefHours">hours</p>
+       </li>
+       
+       <li class="seperator">:</li>
+        
+       <li>
+         <span class="minutes">00</span>
+         <p class="timeRefMinutes">minutes</p>
+       </li>
+         
+       <li class="seperator">:</li>
+         <li>
+          <span class="seconds">00</span>
+           <p class="timeRefSeconds">seconds</p>
+          </li>
+    </ul>
+   </div>
+</div>
+<br/>
+
+<p style="font-weight:bold; font-size:18px;">Contact Us</p>
+  <p>Thanks for visiting our website. If you wish to contact us, please use the form below and we'll get back to you as soon as we can. </p>
+<div id="contact">
+  <%= render :partial => "contact" %>
+</div>
+
+
+<script type="text/javascript">
+      $(document).ready(function() {
+
+        $("#countdown").countdown({
+          date: "31 January 2014 00:00:00", // add the countdown's end date (i.e. 25 January 2014 08:00:00)
+          format: "on" // on (03:07:52) | off (3:7:52) - two_digits set to ON maintains layout consistency
+        },
+        function() {
+
+          // the code here will run when the countdown ends
+          alert("We welcome you to Bitcoins!")
+
+        });
+      });
+</script>

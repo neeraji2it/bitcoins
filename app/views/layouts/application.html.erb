@@ -1,0 +1,69 @@
+<html>
+<head>
+   <title>Bitcoins</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application","countdown.js", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  
+ <!-- start navbar top-->
+ <div class="navbar navbar-fixed-top">
+   <div class="navbar-inner" style="background:#3366FF;height:65px;">
+        <div class="container" style="width:98%;">
+          <div class="nav-collapse">
+            <%  response = HTTParty.get("http://data.mtgox.com/api/2/BTCINR/money/ticker") %>
+            <% high = response["data"]["high"]["value"] %>
+            <%  low = response["data"]["low"]["value"] %>
+            <%  avg = response["data"]["avg"]["value"] %>
+              
+              <ul class="nav pull-left">
+                <li style="display:inline; margin-left:440px;margin-top:10px;">
+                  <span style="color:white;font-weight:bold;font-size:14px;">High<br/><%= high %></span>
+                </li>
+                <li></li>
+                <li style="color:white;display:inline; margin-left:60px;margin-top:10px;">
+                  <span style="color:white;font-weight:bold;font-size:14px;">Low <br/><%= low %></span>
+                </li>
+                
+                <li></li>
+                <li style="color:white;display:inline; margin-left:60px;margin-top:10px;">
+                 <span style="color:white;font-weight:bold;font-size:14px;"> Avg<br/><%= avg %></span>
+                </li>
+              </ul>
+            <ul class="nav pull-right">
+              </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+ </div>
+<!-- end navbar-->
+<br/>
+<br/>
+<br/>
+<br/>
+  
+  <!--  container start -->
+  <div class="container" style="width:80%">
+      
+      <% if notice %>
+       <div class="alert alert-info" style="margin-top: 0px;">
+         <a class="close" data-dismiss="alert">x</a>
+         <strong><%= notice %></strong>
+       </div>
+      <% end %>
+    
+    <% if alert %>
+     <div class="alert alert-error">
+      <a class="close" data-dismiss="alert">x</a>
+      <strong><%= alert %></strong>
+     </div>
+    <% end %>
+    
+   <%= yield %>
+    
+  </div>
+  <!-- container end -->
+  
+</body>
+</html>
