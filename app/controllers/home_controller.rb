@@ -2,8 +2,12 @@ class HomeController < ApplicationController
   
   def subscribe
     @contact = Contact.new
+    render :layout => false
   end
   
+  def contact
+    @contact = Contact.new
+  end
   
   def contact_us
     @contact = Contact.new(contact_params)

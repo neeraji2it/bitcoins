@@ -1,42 +1,66 @@
-<%= form_for(@contact, :url=> contact_us_path, :method => :post, :remote => true) do |f| %>
-<% if @contact.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this contact from being saved.</h2>
-
-      <ul>
-        <% @contact.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
+<div id="openModal" class="modalDialog">
+  <div class="bg">
+      <div class="image">
+        <div class="bg-img">
+          <div id="close" style="padding:10px 0 0 771px;width:10px;"><%= image_tag("closebttn.png") %></div>
+          <div style="padding-top:5px;padding-left:25px;"><%= image_tag("headertxt.png") %></div>
+          <%= form_for(@contact, :url=> contact_us_path, :method => :post, :remote => true) do |f| %>
+  
+            <div style="padding:44px 2px 2px 29px;">
+              <%= f.text_field :first_name,:placeholder => "First Name",:style=>"width:360px;height:52px;background-color:#FFFCFF;border-color:#C9C9C9;" %>
+            </div>
+  
+            <div style="padding:12px 0 0 402px;margin-top:-66px;">
+              <%= f.text_field :last_name,:placeholder => "Last Name",:style=>"width:360px;height:52px;background-color:#FFFCFF;border-color:#C9C9C9;" %>
+            </div>
+  
+            <div style="padding:20px 2px 2px 29px;">
+              <%= f.text_field :email,:placeholder => "Email Id",:style=>"width:360px;height:52px;background-color:#FFFCFF;border-color:#C9C9C9;" %>
+            </div>
+  
+            <div style="padding:30px 0 0 402px;margin-top:-84px;">
+              <%= f.text_field :phone_number,:placeholder => "Mobile number",:style=>"width:360px;height:52px;background-color:#FFFCFF;border-color:#C9C9C9;" %>
+            </div>
+  
+            <div style="padding:24px 2px 2px 236px; width:380px;">
+              <%= image_submit_tag("submitbttn.png") %>
+            </div>
+  
+          <% end %>
+        </div>
+      </div>
     </div>
- <% end %>
-
-<div class="field">
-  <%= f.label :first_name, "First Name" %>
-  <%= f.text_field :first_name %>
 </div>
 
-<div class="field">
-  <%= f.label :last_name, "Last Name" %>
-  <%= f.text_field :last_name %>
-</div>
+  <script>
+    $(document).ready(function(){
+      $("#close").click(function(){
+        $("#openModal").fadeOut();
+      });
+    });
+  </script>
 
-<div class="field">
-  <%= f.label :email,"Email Address" %>
-  <%= f.email_field :email %>
-</div>
+<style>
+  .modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+       
 
-<div class="field">
-  <%= f.label :phone_number, "Phone Number" %>
-  <%= f.text_field :phone_number %>
-</div>
+}
 
-<div class="field">
-  <%= f.label :country, "Country of Residence" %>
-  <%= f.text_field :country %>
-</div>
-
-<div class="action">
-  <%= f.submit :send, :class => "btn btn-small btn-success" %>
-</div>
-<% end %>
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+</style>

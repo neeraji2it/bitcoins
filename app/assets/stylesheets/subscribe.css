@@ -1,0 +1,193 @@
+/* 
+    Document   : subscribe
+    Created on : 18 Dec, 2013, 3:50:04 PM
+    Author     : rails
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+.counter {
+    background:#000;
+    height:10px;
+    position:relative;
+    margin:70px 0;
+}
+
+.counter .timer {
+    background:#111;
+    width:254px;
+    height:68px;
+    position:absolute;
+    top:-38px;
+    left:50%;
+    margin-left:-137px;
+    -webkit-box-shadow:inset 0 2px 6px -3px #999;
+    -moz-box-shadow:inset 0 2px 6px -3px #999;
+    -o-box-shadow:inset 0 2px 6px -3px #999;
+    box-shadow:inset 0 2px 6px -3px #999;
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    -o-border-radius:6px;
+    border-radius:6px;
+    padding:10px;
+}
+.counter .timer ul {
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+.counter .timer ul li {
+    background:url(/assets/demo/digit.png) no-repeat;
+    width:56px;
+    float:left;
+    text-align:center;
+}
+
+
+.counter .timer ul li.seperator {
+    background:0;
+    width:10px;
+    font-size:25px;
+    line-height:68px;
+}
+
+ .counter .timer ul li span {
+    color:#ccc;
+    font-size:30px;
+    line-height:68px;
+    text-shadow:0 1px 1px #222;
+    
+}
+
+
+.counter .timer ul li p {
+    color:#222;
+    font-size:11px;
+    padding-top: 14px;
+    
+}
+
+#home {
+    min-height:100%;
+}
+
+.main{
+    overflow :auto;
+    
+}
+
+.main .header {
+   overflow :auto;
+   width :100%;
+   height :100%;
+   background :url(bg.jpg);
+}
+
+.main .header .head {
+    width:100%;
+    max-width:360px;
+    position:relative;
+    margin:0 auto;
+    padding:30px 0;
+}
+
+.main .header .head .logo {
+    width:340px;
+    height:130px;
+    background-image:url(logo.png);
+    background-repeat:no-repeat;
+}
+
+.main .header .msg {
+    width :980px;
+    height :130px;
+    background-image:url(centretxt.png);
+    background-repeat:no-repeat;
+    margin :auto;
+}
+
+.main .header .box{
+    height: 260px;
+    margin: auto;
+    padding-top: 42px;
+    width: 1022px;
+}
+
+.main .header .box .timer{
+    width :560px;
+    height :150px;
+    float :left;
+    padding-top :30px;
+}
+.main .header .box .timer ul li{
+    background-image:url(woodenbox.png);
+    background-repeat:no-repeat;
+    width:130px;
+    float:left;
+    text-align:center;
+}
+
+.main .header .box .timer ul li span {
+    color:#ccc;
+    font-size:24px;
+    line-height:68px;
+    text-shadow:0 1px 1px #222;
+}
+
+.main .header .box .timer ul li p {
+    color:white;
+    font-size:16px;
+    padding-top: 4px;
+    text-align: center;
+}
+
+.main .header .box .price {
+    background-image:url(chart.png);
+    background-repeat:no-repeat;
+    width:450px;
+    height:250px;
+    float :right;
+}
+
+.main .header .about_us{
+    background-image:url(aboutusbg.png);
+    background-repeat:no-repeat;
+    width:960px;
+    height :250px;
+    margin :auto;
+    overflow:hidden;
+    margin-bottom :40px;
+}
+
+#subscription{
+    min-height:100%;
+}
+
+ .bg{
+    background-image:url(backgndimage.jpg);
+    background-repeat:no-repeat;
+    height:100%;
+    width:100%;
+}
+ .bg .image{
+    padding-top :150px;
+    padding-bottom :20px;
+    width: 800px;
+    height :300px;
+    margin :auto;
+}
+
+.bg .image .bg-img{
+    background-image:url(bg.png);
+    background-repeat:no-repeat;
+    height:400px;
+    width:800px;
+}
+
+
+
