@@ -69,9 +69,9 @@
               <h1>Contact us</h1>
               <%= image_tag("emailicon.png") %>
               <p style="padding-left:93px;margin-top:-52px;">Info@GlobalCoinTrading.com</p>
-              <div style="margin-top:45px;"><%= link_to image_tag("subscribebttn.png"),"#openModal" %></div>
-                <%= render :partial => "contact" %>
-             </div>
+              <div style="margin-top:45px;"><%= link_to image_tag("subscribebttn.png"),"#openModal",:id => "subscription" %></div>
+              <%= render :partial => "contact" %>
+            </div>
             <div style="margin-left: 538px; margin-top: 6px;"><%= image_tag("sep.png") %></div>
           </div>
         </div>
@@ -87,6 +87,9 @@
 
     <script type="text/javascript">
       $(document).ready(function() {
+        $("#subscription").ready(function(){
+          location.href = "#openModal";
+        });
 
         $("#countdown").countdown({
           date: "31 January 2014 00:00:00", // add the countdown's end date (i.e. 25 January 2014 08:00:00)
