@@ -11,7 +11,7 @@
     <div id ="home">
       <div class="main">
         <div class="header">
-          <div class="head"><div class="logo"></div></div>
+          <div class="head"><div class="logo">Global Coins Trading</div><div style="font-family:'Open Sans',sans-serif;font-size:17px;margin:-73px 0 0 4px;color:white;">Making Buying, Selling and Using Coins Easy</div></div>
           <div class="msg"></div>
           <div class="box">
             <div class="timer">
@@ -44,18 +44,18 @@
                 <div style="color: white; position: relative; left: 38px;margin-top:33px;"><%= image_tag("tabletxt.png") %></div>
                 <li style="display: inline; position: relative; color: black; left: 33px; top: 26px;">
                   <div style="color: black; font-weight: bold; font-size: 14px; margin-top: 15px; margin-left: 16px;font-family:'Open Sans',sans-serif;">High</div>
-                  <div style="color: black; position: relative; top: 36px; font-size: 10px; left:5px;font-family:'Open Sans',sans-serif;"><%= high %></div>
+                  <div style="color: black; position: relative; top: 36px; font-size: 11px; left:13px;font-family:'Open Sans',sans-serif;">&#8377;<%= number_with_precision(high, :precision => 0, :delimiter => ',') %></div>
                 </li>
                 <li></li>
                 <li style="color: black; font-weight: bold; font-size: 14px; width: 66px; margin: 30px 34px;">
                   <div style="color: black; font-weight: bold; position: relative; left: 45px; font-size: 14px; top: 10px; margin-left: 12px;font-family:'Open Sans',sans-serif;">Low </div>
-                  <div style="color: black; position: relative; left: 44px; top: 46px; font-weight: normal; font-size: 10px;font-family:'Open Sans',sans-serif;"><%= low %></div>
+                  <div style="color: black; position: relative; left: 55px; top: 47px; font-weight: normal; font-size: 11px;font-family:'Open Sans',sans-serif;">&#8377;<%= number_with_precision(low, :precision => 0, :delimiter => ',')  %></div>
                 </li>
 
                 <li></li>
                 <li style="display: inline; position: relative; left: 30px; color: black; top: 30px;">
                   <div style="color: black; font-weight: bold; font-size: 14px; margin-top: 10px; margin-left: 26px;font-family:'Open Sans',sans-serif;">Avg</div>
-                  <div style="color: black; position: relative; font-size: 10px; left: 16px; top: 37px;font-family:'Open Sans',sans-serif;"><%= avg %></div>
+                  <div style="color: black; position: relative; font-size: 11px; left: 20px; top: 37px;font-family:'Open Sans',sans-serif;">&#8377;<%= number_with_precision(avg, :precision => 0, :delimiter => ',')  %></div>
                 </li>
               </ul>
             </div>
@@ -63,7 +63,7 @@
           <div class="about_us">
             <div style="width:500px; float:left;height:220px;">
               <h1 style="margin-left:33px;">About us</h1>
-              <p style="margin-left: 33px;font-size:14px;text-align:justify;">Global Coin Trading is based in New Delhi India. Our goal is to make buying,selling and using coins easy. we are currently working on our trading platform and we wish to give you a fantastic experience through that platform. we will be live very soon.</p>
+              <p style="margin-left: 33px;font-size:14px;text-align:justify;">Global Coin Trading is based in New Delhi, India. Our goal is to make Buying, Selling and Using Coins easy. We are currently working on our trading platform and we wish to give you a fantastic experience once we are live. If in the meantime you have any questions or comments, please do not hesitate to contact us by email at Info@GlobalCoinsTrading.com.</p>
             </div>
             <div style="width:370px; float:right;margin-right:20px;height:220px;">
               <h1>Contact us</h1>
@@ -103,6 +103,6 @@
         });
       });
     </script>
-
+  
   </body>
 </html>
