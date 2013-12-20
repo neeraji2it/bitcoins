@@ -3,6 +3,11 @@ class UserMailer < ActionMailer::Base
   
   def contact_us(contact)
     @contact = contact
-    mail(:to => "info@maxpropertiesllc.com", :subject => "Contact Details")
+    mail(:to => "sowmya@dine-media.com", :subject => "Contact Details")
+  end
+  
+  def subscribe(contact)
+    @contact = contact
+    mail(:to => @contact.email, :subject => "info")
   end
 end

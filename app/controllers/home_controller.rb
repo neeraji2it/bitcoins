@@ -13,7 +13,7 @@ class HomeController < ApplicationController
     @contact = Contact.new(contact_params)
     if @contact.save
       UserMailer.contact_us(@contact).deliver
-      flash[:notice]= "Thanks #{@contact.first_name} for registering with our website."
+      UserMailer.subscribe(@contact).deliver
       respond_to do |format|
         format.js
       end
